@@ -16,8 +16,8 @@ class _InputPageState extends State<InputPage> {
   Color maleCardColor = kinactiveCardColor;
   Color femaleCardColor = kinactiveCardColor;
   int height = 180;
-  int weight = 699;
-  int age = 10;
+  int weight = 50;
+  int age = 30;
   void updateColor(kGender selectedGender) {}
 
   @override
