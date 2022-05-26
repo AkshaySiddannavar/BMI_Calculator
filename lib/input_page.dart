@@ -16,8 +16,8 @@ class _InputPageState extends State<InputPage> {
   Color maleCardColor = kinactiveCardColor;
   Color femaleCardColor = kinactiveCardColor;
   int height = 180;
-  int weight = 60;
-  int age = 140;
+  int weight = 699;
+  int age = 10;
   void updateColor(kGender selectedGender) {}
 
   @override
@@ -150,7 +150,11 @@ class _InputPageState extends State<InputPage> {
                                 icon: FontAwesomeIcons.minus,
                                 onTap: () {
                                   setState(() {
-                                    weight--;
+                                    if (weight > 1) {
+                                      weight--;
+                                    } else {
+                                      print('Negative weights are impossible');
+                                    }
                                   });
                                 },
                               ),
@@ -158,7 +162,12 @@ class _InputPageState extends State<InputPage> {
                                 icon: FontAwesomeIcons.plus,
                                 onTap: () {
                                   setState(() {
-                                    weight++;
+                                    if (weight < 700) {
+                                      weight++;
+                                    } else {
+                                      print(
+                                          'Please check your weight again \nIn case you really weigh more than 700 Kg Go and register for Guinness World Records \nAll The Best! 👍');
+                                    }
                                   });
                                 },
                               )
