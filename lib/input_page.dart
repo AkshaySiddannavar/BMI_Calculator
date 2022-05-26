@@ -17,7 +17,7 @@ class _InputPageState extends State<InputPage> {
   Color femaleCardColor = kinactiveCardColor;
   int height = 180;
   int weight = 60;
-  int age = 10;
+  int age = 140;
   void updateColor(kGender selectedGender) {}
 
   @override
@@ -190,7 +190,11 @@ class _InputPageState extends State<InputPage> {
                                 icon: FontAwesomeIcons.minus,
                                 onTap: () {
                                   setState(() {
-                                    age--;
+                                    if (age > 1) {
+                                      age--;
+                                    } else {
+                                      print('Age can\'t be negative');
+                                    }
                                   });
                                 },
                               ),
@@ -198,7 +202,12 @@ class _InputPageState extends State<InputPage> {
                                 icon: FontAwesomeIcons.plus,
                                 onTap: () {
                                   setState(() {
-                                    age++;
+                                    if (age <= 149) {
+                                      age++;
+                                    } else {
+                                      print(
+                                          'humans usually don\'t live this long check your age again');
+                                    }
                                   });
                                 },
                               )
